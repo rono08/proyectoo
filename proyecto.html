@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>UFC Arena</title>
+
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body{
+      background:#0b0b0b;
+      color:white;
+    }
+
+    header{
+      height:100vh;
+      background:
+      linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)),
+      url('https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?q=80&w=1600&auto=format&fit=crop');
+      background-size:cover;
+      background-position:center;
+      display:flex;
+      flex-direction:column;
+      justify-content:center;
+      align-items:center;
+      text-align:center;
+      padding:20px;
+    }
+
+    header h1{
+      font-size:5rem;
+      color:#d20a0a;
+      letter-spacing:5px;
+      margin-bottom:20px;
+      text-shadow:0 0 20px red;
+    }
+
+    header p{
+      font-size:1.3rem;
+      max-width:700px;
+      margin-bottom:30px;
+    }
+
+    .btn{
+      padding:15px 35px;
+      background:#d20a0a;
+      color:white;
+      text-decoration:none;
+      border-radius:8px;
+      font-weight:bold;
+      transition:0.3s;
+    }
+
+    .btn:hover{
+      background:white;
+      color:#d20a0a;
+      transform:scale(1.05);
+    }
+
+    nav{
+      position:fixed;
+      top:0;
+      width:100%;
+      padding:20px;
+      background:rgba(0,0,0,0.85);
+      display:flex;
+      justify-content:space-between;
+      align-items:center;
+      z-index:1000;
+    }
+
+    nav h2{
+      color:#d20a0a;
+      font-size:2rem;
+    }
+
+    nav ul{
+      display:flex;
+      list-style:none;
+      gap:20px;
+    }
+
+    nav a{
+      color:white;
+      text-decoration:none;
+      transition:0.3s;
+    }
+
+    nav a:hover{
+      color:#d20a0a;
+    }
+
+    section{
+      padding:80px 10%;
+    }
+
+    .fighters{
+      display:grid;
+      grid-template-columns:repeat(auto-fit, minmax(250px,1fr));
+      gap:30px;
+      margin-top:40px;
+    }
+
+    .card{
+      background:#151515;
+      border-radius:15px;
+      overflow:hidden;
+      transition:0.3s;
+      border:2px solid transparent;
+    }
+
+    .card:hover{
+      transform:translateY(-10px);
+      border:2px solid #d20a0a;
+    }
+
+    .card img{
+      width:100%;
+      height:300px;
+      object-fit:cover;
+    }
+
+    .card-content{
+      padding:20px;
+    }
+
+    .card h3{
+      margin-bottom:10px;
+      color:#d20a0a;
+    }
+
+    footer{
+      background:#111;
+      text-align:center;
+      padding:30px;
+      margin-top:50px;
+      border-top:2px solid #d20a0a;
+    }
+
+    @media(max-width:768px){
+      header h1{
+        font-size:3rem;
+      }
+
+      nav{
+        flex-direction:column;
+        gap:10px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <h2>UFC</h2>
+
+    <ul>
+      <li><a href="#">Inicio</a></li>
+      <li><a href="#">Peleadores</a></li>
+      <li><a href="#">Eventos</a></li>
+      <li><a href="#">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <header>
+    <h1>UFC ARENA</h1>
+
+    <p>
+      Vive la emoción de las artes marciales mixtas con los mejores
+      combates, luchadores legendarios y eventos épicos.
+    </p>
+
+    <a href="#" class="btn">Ver Próxima Pelea</a>
+  </header>
+
+  <section>
+    <h2 style="font-size:3rem; color:#d20a0a; text-align:center;">
+      Peleadores Destacados
+    </h2>
+
+    <div class="fighters">
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?q=80&w=1200&auto=format&fit=crop" alt="fighter">
+
+        <div class="card-content">
+          <h3>Conor McGregor</h3>
+          <p>
+            Uno de los luchadores más famosos de la historia de la UFC.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1546484959-f58c2f7d6a6e?q=80&w=1200&auto=format&fit=crop" alt="fighter">
+
+        <div class="card-content">
+          <h3>Israel Adesanya</h3>
+          <p>
+            Campeón conocido por su velocidad y precisión en striking.
+          </p>
+        </div>
+      </div>
+
+      <div class="card">
+        <img src="https://images.unsplash.com/photo-1517964603305-11c0f6f66012?q=80&w=1200&auto=format&fit=crop" alt="fighter">
+
+        <div class="card-content">
+          <h3>Jon Jones</h3>
+          <p>
+            Considerado uno de los mejores peleadores de todos los tiempos.
+          </p>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <section style="background:#151515; text-align:center;">
+    <h2 style="font-size:3rem; color:#d20a0a;">
+      Próximo Evento
+    </h2>
+
+    <p style="margin-top:20px; font-size:1.2rem;">
+      UFC 310 - Sábado 25 de Mayo
+    </p>
+
+    <br>
+
+    <a href="#" class="btn">Comprar Entradas</a>
+  </section>
+
+  <footer>
+    <p>© 2026 UFC Arena | Diseñado con estilo MMA</p>
+  </footer>
+
+</body>
+</html>
